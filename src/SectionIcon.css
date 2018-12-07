@@ -1,0 +1,46 @@
+.SectionIcon-cont {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: -25px;
+}
+
+.SectionIcon-outer-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 150px;
+  height: 150px;
+  transform-origin: center;
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+
+.SectionIcon-inner-cont {
+  transform-origin: center;
+  transform: rotate(-45deg);
+}
+
+.SectionIcon-border {
+  position: absolute;
+  height: calc(100% - 9px);
+  width: calc(100% - 9px);
+  z-index: 1;
+}
+
+.SectionIcon-border:hover {
+  border: 5px solid white;
+}
+
+.SectionIcon-outer-cont > img {
+  position: absolute;
+  transform: rotate(-45deg);
+  /* width: 150%; */
+  height: 200%;
+  opacity: 0.5;
+  z-index: 2;
+  transition: all 0.1s linear;
+}
+
+.SectionIcon-outer-cont > img:hover {
+  opacity: 1;
+}

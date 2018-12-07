@@ -1,0 +1,13 @@
+.NavBar-cont {
+  display: flex;
+  flex-direction: row;
+}
+
+.NavBar-name {
+  margin: 0.5em;
+}
+
+.NavBar-title {
+  margin: 0.5em;
+  text-transform: lowercase;
+}
