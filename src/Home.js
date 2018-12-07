@@ -13,6 +13,11 @@ import imgAlgorithms from './img_algorithms.gif';
 export default class Home extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      show: true
+    };
+
     this.colors = {
       red: '#F95F62',
       orange: '#FF9052',
@@ -22,34 +27,77 @@ export default class Home extends Component {
       purple: '#976DD0',
       white: '#F0E3E9'
     };
+
+    this.sections = [
+      {
+        id: 'aboutMe',
+        color: this.colors.orange,
+        image: imgAboutMe
+      },
+      {
+        id: 'lilTanks',
+        color: this.colors.red,
+        image: imgLilTanks
+      },
+      {
+        id: 'jobly',
+        color: this.colors.yellow,
+        image: imgJobly
+      },
+      {
+        id: 'lipslut',
+        color: this.colors.blue,
+        image: imgLipslut
+      },
+      {
+        id: 'algorithms',
+        color: this.colors.purple,
+        image: imgAlgorithms
+      },
+      {
+        id: 'resume',
+        color: this.colors.green,
+        image: imgResume
+      },
+      {
+        id: 'contact',
+        colors: this.colors.white,
+        image: imgContact
+      }
+    ];
+    this.handleClick = this.handleClick.bind(this);
+    this.removeFadeOut = this.removeFadeOut.bind(this);
   }
+
+  handleClick() {
+    this.setState(
+      st => ({
+        show: false
+      }),
+      console.log(this.state)
+    );
+    console.log('click');
+  }
+
+  removeFadeOut() {
+    const homeCont = document.getElementsByClassName('Home-cont');
+    homeCont.classList.remove('fadeOut');
+    console.log('getting here');
+  }
+
   render() {
     return (
       <React.Fragment>
         <NavBar colorName={this.colors.white} colorTitle={this.colors.blue} />
         <div className="Home-cont">
           <div className="Home-grid">
-            <div id="aboutMe">
-              <SectionIcon color={this.colors.orange} image={imgAboutMe} />
-            </div>
-            <div id="lilTanks">
-              <SectionIcon color={this.colors.red} image={imgLilTanks} />
-            </div>
-            <div id="jobly">
-              <SectionIcon color={this.colors.yellow} image={imgJobly} />
-            </div>
-            <div id="lipslut">
-              <SectionIcon color={this.colors.blue} image={imgLipslut} />
-            </div>
-            <div id="algorithms">
-              <SectionIcon color={this.colors.purple} image={imgAlgorithms} />
-            </div>
-            <div id="resume">
-              <SectionIcon color={this.colors.green} image={imgResume} />
-            </div>
-            <div id="contact">
-              <SectionIcon color={this.colors.white} image={imgContact} />
-            </div>
+            {this.sections.map(section => {
+              return (
+                <div id={section.id} onClick={this.handleClick}>
+                  <SectionIcon color={section.color} image={section.image} />
+                </div>
+              );
+            })}
           </div>
         </div>
       </React.Fragment>
