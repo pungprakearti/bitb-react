@@ -19,13 +19,17 @@ export default class PrintResume extends Component {
             <h3>Experience</h3>
             <div className="PrintResume-faneron">
               <h4>Front End Web Development Intern</h4>
-              Faneron Inc.
+              Faneron Inc. -{' '}
+              <a href="http://www.lipslut.com">www.lipslut.com</a>
               <br />
               November 2018 - present
               <br />
               <ul>
                 <li>Refactored an existing production JAMstack code base.</li>
-                <li>Fetched data from Contentful using GraphQL queries.</li>
+                <li>
+                  Fetched data from APIs, such as Contentful using GraphQL
+                  queries.
+                </li>
                 <li>
                   Used Gatsby and React Portals to create reusable components.
                 </li>
@@ -81,15 +85,16 @@ export default class PrintResume extends Component {
           <div className="PrintResume-left">
             <h3>Projects</h3>
             <div className="PrintResume-projects-cont">
-              <a href="http://www.lipslut.com">www.lipslut.com</a>
+              {/* <a href="http://www.lipslut.com">www.lipslut.com</a>
               <ul className="PrintResume-lipslut">
                 <li>JAMstack that utilizes Gatsby, React and GraphQL. </li>
-              </ul>
+              </ul> */}
               <a href="http://react-jobly.herokuapp.com/">
                 react-jobly.herokuapp.com
               </a>
               <ul className="PrintResume-jobly">
-                <li>React front end with Express back end.</li>
+                <li>React front end</li>
+                <li>Express back end</li>
               </ul>
             </div>
             <h3>Skills</h3>
@@ -98,29 +103,24 @@ export default class PrintResume extends Component {
                 <p>
                   JavaScript
                   <br />
-                  Python
-                  <br />
-                  CSS
-                  <br />
-                  SASS
-                  <br />
-                  JQuery
-                  <br />
-                  JSX
-                  <br />
-                </p>
-              </div>
-              <div className="PrintResume-skills-middle">
-                <p>
                   React
                   <br />
                   Redux
                   <br />
                   Gatsby
                   <br />
-                  Express
+                  JQuery
+                </p>
+              </div>
+              <div className="PrintResume-skills-middle">
+                <p>
+                  Python
                   <br />
                   Flask
+                  <br />
+                  SQLAlchemy
+                  <br />
+                  Express
                   <br />
                   Node.js
                 </p>
@@ -129,11 +129,13 @@ export default class PrintResume extends Component {
                 <p>
                   PostgreSQL
                   <br />
-                  SQLAlchemy
-                  <br />
                   GraphQL
                   <br />
                   Git
+                  <br />
+                  CSS
+                  <br />
+                  SASS
                 </p>
               </div>
             </div>
@@ -144,10 +146,10 @@ export default class PrintResume extends Component {
             2018 - 2019
             <ul>
               <li>
-                Curriculum included JavaScript, Python, front and back end web
-                development, single page applications, data structures, and
-                complex algorithms.
+                In person 17 week accelerated front end and back end web
+                development course.
               </li>
+              <li>Created over 30 web applications in several frameworks.</li>
             </ul>
             <div className="PrintResume-aau">
               <h4>Academy of Art University</h4>
@@ -170,6 +172,20 @@ export default class PrintResume extends Component {
               (415) 868-5025
               <br />
               Rohnert Park, California
+              <br />
+              <br />
+              <div className="PrintResume-bitb">
+                <a href="http://www.biscuitsinthebasket.com">
+                  www.biscuitsinthebasket.com
+                </a>
+              </div>
+              <br />
+              <br />
+              <div className="PrintResume-github">
+                <a href="https://github.com/pungprakearti">
+                  https://github.com/pungprakearti
+                </a>
+              </div>
             </div>
           </div>
         </div>

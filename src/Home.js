@@ -9,6 +9,7 @@ import imgJobly from './img_jobly.gif';
 import imgResume from './img_resume.png';
 import imgContact from './img_contact.gif';
 import imgAlgorithms from './img_algorithms.gif';
+// import PrintResume from './PrintResume';
 
 export default class Home extends Component {
   constructor(props) {
@@ -88,6 +89,7 @@ export default class Home extends Component {
   render() {
     return (
       <React.Fragment>
+        {/* <PrintResume /> */}
         <NavBar colorName={this.colors.white} colorTitle={this.colors.blue} />
         <div className="Home-cont">
           <div className="Home-grid">
